@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Operadores Aritméticos</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h2 id="capitulo1">Operadores aritméticos</h2>
+            <p>Operadores aritméticos em JavaScript são usados ​​para realizar cálculos matemáticos. Aqui estão os
+                mais comumente usados:</p>
+            <p>
+                <li style="list-style: decimal;"><b>Adição (+)</b>: Adiciona dois valores.</li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">3</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">soma</span> = <span class="vari">a</span> + <span
+                            class="vari">b</span>;</p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Subtração (-)</b>: Subtrai um valor de outro.</li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">10</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">diferente</span> = <span class="vari">a</span> -
+                        <span class="vari">b</span>;
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Multiplicação (*:)</b>: Multiplica dois valores.</li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">2</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">produto</span> = <span class="vari">a</span> *
+                        <span class="vari">b</span>;
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Divisão (/)</b>: Divide um valor por outro.</li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">10</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">2</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">quociente</span> = <span class="vari">a</span> /
+                        <span class="vari">b</span>;
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Módulo (%)</b>: Retorna o restante de uma operação de divisão.</li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">3</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">restante</span> = <span class="vari">a</span> %
+                        <span class="vari">b</span>;
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Exponenciação ( ):**</b> Eleva um valor à potência de outro valor.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('6')" value="Copiar"></input>
+                <div class="textoCode" id="6">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">2</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">4</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">exponenciação</span> = <span
+                            class="vari">a</span> **
+                        <span class="vari">b</span>;
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Incremento (++)</b>: Aumenta o valor de uma variável em 1.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('7')" value="Copiar"></input>
+                <div class="textoCode" id="7">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="vari">a</span>++;</p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Decremento (--)</b>: Diminui o valor de uma variável em 1.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('8')" value="Copiar"></input>
+                <div class="textoCode" id="8">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="vari">a</span>--;</p>
+                    </p>
+                </div>
+            </div>
+            <p>É importante observar que ao usar operadores aritméticos com valores não numéricos, o JavaScript tentará
+                primeiro convertê-los em números. No entanto, isso às vezes pode levar a resultados inesperados, por
+                isso geralmente é uma boa ideia certificar-se de que você está trabalhando explicitamente com números.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

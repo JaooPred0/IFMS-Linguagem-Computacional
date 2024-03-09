@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Operadores Lógicos</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h1>Operadores Lógicos</h1>
+            <p>Em JavaScript, os operadores lógicos são usados para combinar expressões booleanas. Eles são usados para
+                executar operações lógicas como AND, OR e NOT.</p>
+            <p>
+                <li style="list-style: decimal;"><b>Operador AND (&&)</b>: Este operador retorna true se ambas as
+                    expressões forem verdadeiras.
+                     Caso contrário, retorna false.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">10</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="tag">a</span>
+                        < <span class="tag">b</span> && <span class="tag">a</span> > <span class="number">0</span>);
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <li style="list-style: decimal;"><b>Operador OR (||)</b>: Este operador retorna true se pelo menos uma
+                    das expressões for verdadeira. Caso contrário, retorna false.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">10</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="tag">a</span>
+                        > <span class="tag">b</span> || <span class="tag">a</span> > <span class="number">0</span>);
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <li style="list-style: decimal;"><b>Operador NOT (!)</b>: Este operador retorna o valor oposto de uma
+                    expressão booleana. Se a expressão for verdadeira, o operador NOT retornará false. Se a expressão
+                    for falsa, o operador NOT retornará true.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="tag">!</span>(<span
+                            class="tag">a</span> > <span class="number">100</span>));
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <li style="list-style: decimal;"><b>Operador AND curto-circuito (&&=)</b>: Este operador é uma
+                    combinação do operador AND e do operador de atribuição. Ele retorna o valor da segunda expressão se
+                    a primeira expressão for verdadeira. Caso contrário, retorna o valor da primeira expressão.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">10</span>;</p>
+                    <p><span class="vari">a</span> &&= <span class="vari">b</span> > <span class="number">0</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span>);</p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Operador OR curto-circuito (||=)</b>: Este operador é uma combinação do
+                        operador OR e do operador de atribuição. Ele retorna o valor da segunda expressão se a primeira
+                        expressão for falsa. Caso contrário, retorna o valor da primeira expressão.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="number">10</span>;</p>
+                    <p><span class="vari">a</span> ||= <span class="vari">b</span> > <span class="number">0</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span>);</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

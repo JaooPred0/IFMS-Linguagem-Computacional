@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Variáveis e constantes</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h2 id="capitulo1">Características de Tipagem</h2>
+            <p>Primeiramente, devemos citar que a linguagem JavaScript é de tipagem dinâmica, ou seja, não é
+                necessário
+                declarar tipo a uma variável, podendo ser modificada posteriormente.</p>
+
+            <p>A própria linguagem de programação, neste caso, tem a habilidade de escolher o tipo de dado de acordo
+                com o valor atribuído a variável.</p>
+            <h2 id="capitulo2">Tipos de dados</h2>
+            <p>Ao programar em JavaScrpit nós precisamos saber quais os tipos de dados que a linguagem trabalha, os
+                principais tipos de dados primitivos são:</p>
+            <ul>
+                <li>
+                    <b>Boolean</b> - possuem apenas dois valores: verdadeiro ou falso;
+                </li>
+                <li>
+                    <b>Undefined</b> - indica que não foi definido um valor;
+                </li>
+                <li>
+                    <b>Null</b> - indica que um valor é nulo;
+                </li>
+                <li>
+                    <b>Number</b> - armazena valores numéricos;
+                </li>
+                <li>
+                    <b>String</b> - armazena textos;
+                </li>
+                <li>
+                    <b>Symbol</b> - armazena símbolos;
+                </li>
+            </ul>
+            <p>Além dos tipos de dados primitivos, nós também temos o tipo <b>object</b>, que possibilita
+                trabalharmos com
+                objetos utilizando JavaScript.</p>
+            <h2 id="capitulo3">Regras de nomeação de variáveis</h2>
+            <p>Uma das peculiaridades da linguagem JavaScript é que podemos declarar variáveis de duas formas,
+                utilizando <b>var</b>, comum em outras linguagens, ou utilizando <b>let</b>.</p>
+
+            <p>Vale ressaltar que por se tratar de uma linguagem de tipagem dinâmica, ao declarar uma variável não é
+                necessário informar o tipo da variável, por exemplo:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">var</span> <span class="vari">idade</span> = <span class="number">16</span>;
+                    </p>
+                    <p><span class="tag">var</span> <span class="vari">nome</span> = <span class="text">'João'</span>;
+                    </p>
+                    <p><span class="tag">var</span> <span class="vari">endereco</span> = <span class="text">'Av.
+                            Central 1'</span>;</p>
+                </div>
+            </div>
+            <p>Ao atribuir o valor 15 para a variável idade, a linguagem já reconhece como uma variável do tipo
+                <b>Number</b>. O mesmo ocorre para a variável nome, ao atribuirmos o valor João a linguagem
+                reconhece
+                como uma variável do tipo <b>String</b>.
+            </p>
+            <p>Outras regras devem ser seguidas, como:</p>
+            <ul>
+                <li>
+                    Não declarar variável com palavras reservadas, como let, var, while, for, etc.
+                </li>
+                <li>
+                    Deve conter somente letras, números e underscore.
+                </li>
+                <li>
+                    Pode iniciar com uma letra, underscore (_) ou cifrão ($).
+                </li>
+            </ul>
+            <h2 id="capitulo4">Declarando variáveis com var e let</h2>
+            <p>No JavaScript nós temos que nos atentar quando vamos declarar variáveis usando var ou let, pois cada
+                uma
+                possuí diferenças que são importantes.</p>
+
+            <p>Antes de tudo precisamos explicar que o JavaScript trabalha com escopos, onde cada bloco (funções,
+                condicionais e estruturas de repetição, por exemplo) é um escopo fechado.</p>
+            <p>Ao utilizarmos <b>var</b>, ele trabalha de forma independente para cada escopo de função, por
+                exemplo:</p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">var</span> <span class="vari">nomeCarro</span> = <span class="text">'Ford
+                            F-100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                    <p><span class="tag">var</span> <span class="vari">nomeCarro</span> = <span class="text">'Dodge
+                            D100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                </div>
+            </div>
+            <p>O usuário forneceu um pequeno trecho de código que declara uma variável chamada <b>`nomeCarro`</b> e
+                atribui
+                a ela o valor da string "Ford F-100". Em seguida, ele registra o valor <b>`nomeCarro`</b> no
+                console,
+                altera o valor para "Dodge D100" e o registra novamente no console.</p>
+            <p>Agora se subtituirmos o código acima declaramos as variaveis como <b>let</b>:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag">let</span> <span class="vari">nomeCarro</span> = <span class="text">'Ford
+                            F-100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                    <p><span class="tag">let</span> <span class="vari">nomeCarro</span> = <span class="text">'Dodge
+                            D100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                </div>
+            </div>
+            <p>
+                O usuário forneceu outro trecho de código JavaScript que declara uma variável chamada
+                <b>`nomeCarro`</b> e atribui a ela o valor da string "Ford F-100". Em seguida, ele registra o
+                valor
+                <b>`nomeCarro`</b> no console, altera o valor para "Dodge D100" e o registra novamente no
+                console. No
+                entanto, há uma pequena diferença entre este código e o anterior: desta vez, ele está usando a
+                <b>`let`</b> palavra-chave em vez de <b>`var`</b>.
+            </p>
+            <p>No entanto, é importante notar que a redeclaração de variáveis ​​às vezes pode dificultar a
+                leitura e a compreensão do seu código. Neste exemplo específico, você poderia simplesmente
+                atribuir um novo valor à <b>`nomeCarro`</b> sem declará-la novamente, assim:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">let</span> <span class="vari">nomeCarro</span> = <span class="text">'Ford
+                            F-100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                    <p><span class="vari">nomeCarro</span> = <span class="text">'Dodge
+                            D100'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">nomeCarro</span>);</p>
+                </div>
+            </div>
+            <p>Dessa forma, você evita declarar novamente a variável e deixa seu código um pouco mais claro.</p>
+            <h2 id="capitulo5">Declarando constantes</h2>
+            <p>Assim como em outras linguagens, podemos declarar <b>constantes</b> que possuem valores <b>fixos</b>.
+                Também vale
+                ressaltar que as constantes tem o mesmo comportamento que variáveis definidas como <b>let em relação
+                    ao
+                    escopo de bloco</b>, como vimos no exemplo acima.</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">const</span> <span class="vari">PI</span> = <span class="number">3.14</span>;
+                    </p>
+                </div>
+            </div>
+            <p>Mostrar outro exemplo.</p>
+            <p>O usuário forneceu outro trecho de código JavaScript que declara duas variáveis, <b>`endereco`</b> e
+                <b>`nome`</b>,
+                e registra seus valores no console duas vezes. No entanto, desta vez, ele está usando uma combinação
+                das palavras-chave <b>`const`</b> e <b>`var`</b>, e está tentando declarar novamente a
+                <b>`endereco`</b> variável com um
+                novo valor.
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">const</span> <span class="vari">endereco</span> = <span class="text">'Av.
+                            Central 1'</span>;</p>
+                    <p><span class="tag">var</span> <span class="vari">nome</span> = <span class="text">'João
+                            Pedro'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">endereco</span>,<span class="vari">nome</span>);</p>
+                    <p><span class="tag">const</span> <span class="vari">endereco</span> = <span class="text">'Av.
+                            Central 2'</span>;</p>
+                    <p><span class="tag">var</span> <span class="vari">nome</span> = <span class="text">'Alemão'</span>;
+                    </p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">endereco</span>,<span class="vari">nome</span>);</p>
+                </div>
+            </div>
+            <p>Este código contém alguns problemas. Primeiro, está tentando declarar novamente a
+                <b>`endereco`</b> constante com um novo valor, mas isso não é permitido em JavaScript. Depois que
+                uma
+                variável constante é declarada, seu valor não pode ser alterado. Portanto, a segunda declaração de
+                <b>`endereco`</b> um arquivo <b>`SyntaxError`</b>.
+            </p>
+            <p>Segundo, está tentando declarar novamente a <b>`nome`</b> com um novo valor, mas isso não é
+                necessário. Você pode simplesmente atribuir um novo valor à <b>`nome`</b> existente sem declará-la
+                novamente.</p>
+            <p>Versão correta:</p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">const</span> <span class="vari">endereco</span> = <span class="text">'Av.
+                            Central 1'</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">nome</span> = <span class="text">'João
+                            Pedro'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">endereco</span>,<span class="vari">nome</span>);</p>
+                    <p><span class="vari">endereco</span> = <span class="text">'Av.
+                            Central 2'</span>;</p>
+                    <p> <span class="vari">nome</span> = <span class="text">'Alemão'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">endereco</span>,<span class="vari">nome</span>);</p>
+                </div>
+            </div>
+            <p>Nesta versão corrigida, estamos usando <b>`const`</b> para a <b>`endereco`</b> variável, pois não
+                precisamos
+                alterar seu valor, e <b>`let`</b> para a <b>`nome`</b> variável, pois precisamos alterar seu valor.
+                Também estamos
+                removendo as redeclarações desnecessárias.</p>
+            <h2 id="capitulo6">Conclusão</h2>
+            <p>Concluindo, o JavaScript é uma linguagem de programação versátil que oferece características de
+                tipagem dinâmica, permitindo a declaração de variáveis sem a necessidade de especificar seu tipo. A
+                linguagem é capaz de inferir o tipo de dado com base no valor atribuído à variável. Além dos tipos
+                de dados primitivos, como boolean, undefined, null, number, string e symbol, o JavaScript também
+                suporta objetos, o que amplia suas capacidades de programação.</p>
+            <p>As regras de nomeação de variáveis devem ser seguidas para garantir a clareza e a legibilidade do
+                código, incluindo evitar palavras reservadas, utilizar apenas letras, números e underscore, e seguir
+                padrões de nomenclatura adequados.</p>
+            <p>Ao declarar variáveis, é importante entender as diferenças entre usar var e let. Enquanto var
+                funciona de forma independente para cada escopo de função, let trabalha com escopos de bloco,
+                proporcionando maior controle sobre o fluxo do código e evitando problemas de redeclaração.</p>
+            <p>Além disso, o JavaScript permite a declaração de constantes, que são variáveis com valores fixos e
+                comportamento semelhante às variáveis definidas com let em relação ao escopo de bloco. É essencial
+                evitar tentativas de redeclarar constantes, pois isso resultará em erros de sintaxe.</p>
+            <p>Em resumo, ao programar em JavaScript, é crucial compreender suas características de tipagem
+                dinâmica, regras de nomeação de variáveis e diferenças entre var, let e const, a fim de escrever
+                código claro, conciso e sem erros.</p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

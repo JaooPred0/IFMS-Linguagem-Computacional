@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Estruturas Condicional</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h2>Estruturas Condicionais Simples: IF ELSE</h2>
+            <p>Em JavaScript, uma if instrução permite executar um bloco de código somente se uma condição especificada
+                for verdadeira. A sintaxe básica de uma if instrução é:</p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">if</span>( <span class="vari">condicao</span> ) {</p>
+                    <p>ㅤㅤ<span class="coment">// código a ser executado se a condição for verdadeira</span></p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>Aqui, condition pode ser qualquer expressão avaliada como um valor booleano (true ou false). Se a
+                condição
+                for avaliada como true, o código entre chaves ({}) será executado. Se a condição for avaliada como
+                false, o código entre chaves será ignorado.</p>
+            <p>Aqui está um exemplo que demonstra como usar uma if instrução para verificar se um número é positivo ou
+                negativo:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">let</span> <span class="vari">num</span> = <span class="number">-5</span>;</p>
+                    <p><span class="tag">if</span>(<span class="vari">num</span> > <span class="number">0</span> {</p>
+                    <p><span class="tag2">ㅤㅤconsole</span>.<span class="tag3">log</span>(<span class="vari">num</span>,
+                        <span class="text">'é um número positivo.')</span>;
+                    </p>
+                    <p>} <span class="tag">else</span> {</p>
+                    <p><span class="tag2">ㅤㅤconsole</span>.<span class="tag3">log</span>(<span class="vari">num</span>,
+                        <span class="text">'é um número negativo.')</span>;
+                    </p>
+                    <p>}</p>
+                </div>
+            </div>
+            <h2>Estruturas Condicionais Compostas: IF ELSE</h2>
+            <p>Neste exemplo, primeiro declaramos uma variável `num` e atribuímos a ela o valor -5. Em seguida, usamos
+                uma instrução `if` para verificar se `num` é maior que 0. Como -5 não é maior que 0, a condição é
+                avaliada como falsa e o código dentro do bloco `else` é executado. A saída deste código seria o
+                resultado do bloco `else`.</p>
+            <p>
+                Você também pode usar a palavra-chave else if para adicionar condições adicionais à sua declaração if.
+                Aqui está um exemplo que demonstra como usar else if para verificar se um número é positivo, zero ou
+                negativo:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag">let</span> <span class="vari">num</span> = <span class="number">-5</span>;</p>
+                    <p><span class="tag">if</span>(<span class="vari">num</span> > <span class="number">0</span> {</p>
+                    <p><span class="tag2">ㅤㅤconsole</span>.<span class="tag3">log</span>(<span class="vari">num</span>,
+                        <span class="text">'é um número positivo.')</span>;
+                    </p>
+                    <p>} <span class="tag">else</span> {</p>
+                    <p>ㅤㅤ<span class="tag">if</span>(<span class="vari">num</span> === <span class="number">0</span>) {
+                    </p>
+                    <p>ㅤㅤㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="text">'O número
+                            é zero'</span>);</p>
+                    <p>ㅤㅤㅤㅤ} <span class="tag">else</span> {</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="text">'O número
+                            é negativo'</span>);</p>
+
+                    <p>ㅤㅤ}</p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>As estruturas condicionais compostas em JavaScript permitem que um programa tome diferentes caminhos
+                dependendo de diferentes condições serem atendidas. Existem dois tipos principais de estruturas
+                condicionais compostas em JavaScript: `if...else if...else` e `switch...case`.</p>
+            <h2>Estruturas Condicionais Explicativa e Composta: Switch Case</h2>
+            <p>Em JavaScript, a estrutura condicional switch é usada para testar uma expressão e executar diferentes
+                blocos de código dependendo do valor da expressão. A sintaxe básica do switch é a seguinte:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">swith</span> (<span class="vari">expressao</span>) {</p>
+                    <p>ㅤㅤ<span class="tag">case</span> <span class="vari">valor1</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="coment">// código a ser executado se a expressão for igual a valor1</span></p>
+                    <p>ㅤㅤㅤㅤ<span class="tag">break</span>;</p>
+                    <p>ㅤㅤ<span class="tag">case</span> <span class="vari">valor2</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="coment">// código a ser executado se a expressão for igual a valor2</span></p>
+                    <p>ㅤㅤㅤㅤ<span class="tag">break</span>;</p>
+                    <p>ㅤㅤ<span class="tag">case</span> <span class="vari">valorN</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="coment">// código a ser executado se a expressão for igual a valorN</span></p>
+                    <p>ㅤㅤㅤㅤ<span class="tag">break</span>;</p>
+                    <p>ㅤㅤ<span class="tag">default</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="coment">// código a ser executado se nenhum dos casos anteriores for
+                            verdadeiro</span></p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>A expressão no início da estrutura switch é avaliada e seu valor é comparado com os valores dos casos. Se
+                o valor da expressão corresponder a um dos valores de caso, o código desse caso será executado até que
+                um break seja encontrado. Se nenhum caso corresponder ao valor da expressão, o código do bloco default
+                será executado. O bloco default é opcional e é executado quando nenhum dos casos corresponde ao valor da
+                expressão.</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">let</span> <span class="vari">dia</span> = <span class="text">'quinta'</span>;</p>
+                    <p><span class="tag">swith</span> (<span class="vari">dia</span>) {</p>
+                    <p>ㅤㅤ<span class="tag">case</span> <span class="text">'segunda'</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="text">'Hoje é segunda-feira'</span>);</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag">break</span>;</p>
+                    <p>ㅤㅤ<span class="tag">case</span> <span class="vari">'quinta'</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="text">'Hoje é quinta-feira'</span>);</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag">break</span>;</p>
+                    <p>ㅤㅤ<span class="tag">default</span>:</p>
+                    <p>ㅤㅤㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="text">'Não sei qual dia da semana é hoje'</span>);</p>
+                    <p>}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

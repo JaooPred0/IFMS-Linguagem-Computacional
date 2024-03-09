@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Operadores Lógicos</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h2>Arrays</h2>
+            <p>Um array em JavaScript é uma estrutura de dados que permite armazenar múltiplos valores em uma única
+                variável. Os arrays podem conter qualquer tipo de dados, incluindo números, strings, objetos e até mesmo
+                outros arrays. Eles são bastante versáteis e amplamente utilizados em programação JavaScript.</p>
+            <h2>Criando um Array</h2>
+            <p>Existem várias maneiras de criar um array em JavaScript</p>
+
+            <p>
+                <li style="list-style: decimal;"><b>Usando colchetes</b>: Você pode criar um array simplesmente
+                    envolvendo uma lista de valores entre colchetes [ ]
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                            class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span
+                            class="number">4</span>, <span class="number">5</span>];</p>
+                </div>
+            </div>
+
+            <p>
+                <li style="list-style: decimal;"><b>Usando o construtor Array()</b>: Você também pode usar o construtor
+                    <b>Array()</b> para criar um array.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">const</span> <span class="vari">meuArray</span> = <span class="tag">new</span>
+                        <span class="tag2">Array</span>(<span class="number">1</span>,
+                        <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>,
+                        <span class="number">5</span>);
+                    </p>
+                </div>
+            </div>
+            <h2>Acessando Elementos do Array</h2>
+            <p>Os elementos em um array são acessados utilizando seus índices, começando em 0 para o primeiro elemento e
+                indo até length - 1 para o último elemento.</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                            class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>,
+                        <span class="number">40</span>, <span class="number">50</span>];
+                    </p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">meuArray</span>[<span class="number">0</span>]); <span class="coment">// Saída:
+                            10</span></p>
+                </div>
+            </div>
+            <h2>Funções Úteis de Arrays</h2>
+            <p>
+            <ul>
+                <li style="list-style: decimal;">
+                    <p><b>push() e pop()</b>: push() adiciona um elemento ao final do array, enquanto pop() remove e
+                        retorna o último elemento.</p>
+                </li>
+                </p>
+                <div class="centralCode">
+                    <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                    <div class="textoCode" id="2">
+                        <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                                class="number">1</span>,
+                            <span class="number">2</span>, <span class="number">3</span>];
+                        </p>
+                        <p><span class="vari">meuArray</span>.<span class="tag3">push</span>(<span
+                                class="number">4</span>);
+                            <span class="coment">// meuArray agora é [1, 2, 3, 4]</span>
+                        </p>
+                        <p><span class="tag">const</span> <span class="vari">elementoRemovido</span> = <span
+                                class="vari">meuArray</span>.<span class="tag3">pop</span>(); <span class="coment">//
+                                elementoRemovido é 4, meuArray agora é [1, 2, 3]</span></p>
+                    </div>
+                </div>
+
+                <li style="list-style: decimal;">
+                    <p><b>shift() e unshift()</b>: unshift() adiciona um elemento ao início do array, enquanto shift()
+                        remove e retorna o primeiro elemento.</p>
+                </li>
+                </p>
+                <div class="centralCode">
+                    <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                    <div class="textoCode" id="2">
+                        <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                                class="number">2</span>,
+                            <span class="number">3</span>, <span class="number">4</span>];
+                        </p>
+                        <p><span class="vari">meuArray</span>.<span class="tag3">unshift</span>(<span
+                                class="number">1</span>);
+                            <span class="coment">// meuArray agora é [1, 2, 3, 4]</span>
+                        </p>
+                        <p><span class="tag">const</span> <span class="vari">elementoRemovido</span> = <span
+                                class="vari">meuArray</span>.<span class="tag3">shift</span>(); <span class="coment">//
+                                elementoRemovido é 4, meuArray agora é [2, 3, 4]</span></p>
+                    </div>
+                </div>
+
+                <li style="list-style: decimal;">
+                    <p><b>indexOf()</b>: Retorna o índice do primeiro elemento correspondente ao valor especificado, ou
+                        -1 se o valor não for encontrado.</p>
+                </li>
+                </p>
+                <div class="centralCode">
+                    <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                    <div class="textoCode" id="2">
+                        <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                                class="number">10</span>,
+                            <span class="number">20</span>, <span class="number">30</span>, <span
+                                class="number">40</span>, <span class="number">50</span>];
+                        </p>
+                        <p><span class="tag">const</span> <span class="vari">indeci</span> = <span
+                                class="tag">meuArray</span>.<span class="tag3">indexOf</span>(<span
+                                class="number">30</span>); <span class="coment">// índice é 2</span></p>
+                    </div>
+                </div>
+
+                <li style="list-style: decimal;">
+                    <p><b>slice()</b>: Retorna uma cópia de parte do array, selecionada a partir do índice inicial até o
+                        índice final (ou até o final do array, se nenhum índice final for fornecido).</p>
+                </li>
+                </p>
+                <div class="centralCode">
+                    <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                    <div class="textoCode" id="2">
+                        <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                                class="number">1</span>,
+                            <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>,
+                            <span class="number">5</span>];
+                        </p>
+                        <p><span class="tag">const</span> <span class="vari">novoArray </span> = <span
+                                class="tag">meuArray</span>.<span class="tag3">slice</span>(<span
+                                class="number">1</span>, <span class="number">3</span>); <span class="coment">//
+                                novoArray é [2, 3]</span></p>
+                    </div>
+                </div>
+
+                <li style="list-style: decimal;">
+                    <p><b>slice()</b>: Retorna uma cópia de parte do array, selecionada a partir do índice inicial até o
+                        índice final (ou até o final do array, se nenhum índice final for fornecido).</p>
+                </li>
+                </p>
+                <div class="centralCode">
+                    <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                    <div class="textoCode" id="2">
+                        <p><span class="tag">const</span> <span class="vari">meuArray</span> = [<span
+                                class="number">1</span>,
+                            <span class="number">2</span>, <span class="number">3</span>];
+                        </p>
+                        <p><span class="vari">meuArray</span>.<span class="tag3">forEach</span>(<span
+                                class="tag">function</span>(<span class="tag">elemento</span>) {</p>
+                        <p>ㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                                class="vari">elemento</span>);</p>
+                        <p>});</p>
+                        <p><span class="coment">// Saída:</span></p>
+                        <p><span class="coment">// 1</span></p>
+                        <p><span class="coment">// 2</span></p>
+                        <p><span class="coment">// 3</span></p>
+                    </div>
+                </div>
+            </ul>
+            <p>Essas são apenas algumas das muitas funções úteis disponíveis para manipular arrays em JavaScript. Elas
+                são poderosas ferramentas para lidar com coleções de dados de maneira eficiente e conveniente.</p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

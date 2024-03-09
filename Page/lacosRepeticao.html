@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Laços de Repetições</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <h2>For{}</h2>
+            <p>O for loop é um tipo de loop em JavaScript que permite executar um bloco de código repetidamente enquanto
+                uma determinada condição for verdadeira. A sintaxe básica de um for loop é a seguinte:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">for</span> (<span class="vari">inicialização</span>; <span
+                            class="vari">condição</span>; <span class="vari">incremento</span>) {</p>
+                    <p>ㅤㅤ<span class="coment">// Bloco de código a ser executado repetidamente</span></p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>Nesta estrutura:</p>
+            <ul>
+                <li>
+                    <b>Inicialização</b> : é aqui que você inicializa quaisquer variáveis ​​que usará no loop. Este
+                    código é
+                    executado apenas uma vez, no início do loop.
+                </li>
+                <li>
+                    <b>Condição</b> : esta é uma expressão booleana avaliada antes de cada iteração do loop. Se a
+                    expressão for
+                    verdadeira, o loop continua; se for falso, o loop termina.
+                </li>
+                <li>
+                    <b>Incremento/Decremento</b> : é aqui que você atualiza quaisquer variáveis ​​que estiver usando na
+                    expressão
+                    de condição. Este código é executado após cada iteração do loop.
+                </li>
+            </ul>
+            <p>Aqui está um exemplo de for loop que imprime os números de 0 a 4 no console:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">for</span> (<span class="tag">let</span> <span class="tag">i</span>= <span
+                            class="number">0</span>; <span class="tag">i</span>
+                        < <span class="number">5</span>; <span class="tag">i</span>++)
+                            {
+                    </p>
+                    <p>ㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span class="tag">i</span>);
+                    </p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>Quando você inicializa a variável i com 0 na seção de inicialização e define a condição i < 5, o loop
+                    continuará executando enquanto i for menor que 5. Após cada iteração, a seção de incremento é
+                    executada, adicionando 1 a i.</p>
+                    <p>É verdade que você pode omitir qualquer uma das três partes do for loop, dependendo das
+                        necessidades do seu código. Se você quiser fazer um loop indefinidamente, pode omitir a seção de
+                        condição, como neste exemplo:</p>
+                    <div class="centralCode">
+                        <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                        <div class="textoCode" id="3">
+                            <p><span class="tag">for</span> (<span class="tag">let</span> <span class="tag">i</span>=
+                                <span class="number">0</span>; ; <span class="tag">i</span>++)
+                                {
+                            </p>
+                            <p>ㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                                    class="tag">i</span>);
+                            </p>
+                            <p>ㅤㅤ<span class="coment">// Código a ser repetido indefinidamente </span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                    <h2>While{}</h2>
+                    <p>O while loop é um tipo de loop em JavaScript que permite executar um bloco de código
+                        repetidamente enquanto uma determinada condição for verdadeira. A sintaxe básica de um while
+                        loop é a seguinte:</p>
+                    <div class="centralCode">
+                        <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                        <div class="textoCode" id="4">
+                            <p><span class="tag">while</span> (<span class="vari">condicao</span>) {</p>
+                            <p>ㅤㅤ<span class="coment">// Bloco de código a ser executado repetidamente</span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                    <p>Nesta estrutura:</p>
+
+                    <ul>
+                        <li>A <b>condição</b> é avaliada antes de cada iteração do loop. Se for verdadeira, o bloco de
+                            código é
+                            executado; caso contrário, o loop é encerrado.</li>
+                    </ul>
+                    <p>O <b>while</b> loop é útil quando você não sabe exatamente quantas vezes precisará repetir um
+                        bloco de
+                        código, mas sabe que deseja continuar enquanto uma determinada condição for verdadeira.</p>
+                    <p>Aqui está um exemplo de whileloop que imprime os números de 0 a 4 no console:</p>
+                    <div class="centralCode">
+                        <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                        <div class="textoCode" id="5">
+                            <p><span class="tag">let</span> <span class="vari">i</span> = <span class="number">0</span>;
+                            </p>
+                            <p><span class="tag">while</span> (<span class="vari">i</span>
+                                < <span class="number">5</span>) {
+                            </p>
+                            <p>ㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                                    class="vari">i</span>);</p>
+                            <p>ㅤㅤ<span class="vari">i</span>++</p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                    <p>No exemplo fornecido, a variável i é inicializada com 0 fora do loop. A condição i < 5 é avaliada
+                            antes de cada iteração, e o loop continua enquanto i for menor que 5. Após cada iteração, o
+                            bloco de código dentro do loop é executado, e o valor de i é atualizado adicionando 1 a
+                            ele.</p>
+                            <h2>Do...While{}</h2>
+                            <p>Uma
+                                consideração importante sobre os loops while é que se a condição for inicialmente falsa,
+                                o bloco
+                                de código dentro do loop não será executado. Isso pode ser uma fonte comum de bugs se
+                                não for
+                                tratado com cuidado. Para garantir que o bloco de código seja executado pelo menos uma
+                                vez, você
+                                pode usar um loop do...while, que sempre executa o bloco de código uma vez antes de
+                                verificar a
+                                condição novamente.</p>
+                            <div class="centralCode">
+                                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                                <div class="textoCode" id="5">
+                                    <p><span class="tag">let</span> <span class="vari">i</span> = <span
+                                            class="number">0</span>;
+                                    </p>
+                                    <p><span class="tag">do</span> {
+                                    </p>
+                                    <p>ㅤㅤ<span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                                            class="vari">i</span>);</p>
+                                    <p>ㅤㅤ<span class="vari">i</span>++</p>
+                                    <p>} <span class="tag">while</span>(<span class="vari">i</span>
+                                        < <span class="number">5</span>);
+                                    </p>
+                                </div>
+                            </div>
+                            <p>No exemplo fornecido, o `do...while` loop executará o bloco de código uma vez,
+                                independentemente de a condição ser inicialmente falsa. Após a primeira execução do
+                                bloco de
+                                código, a condição é verificada. Se a condição for falsa, o loop terminará sem executar
+                                o
+                                bloco de código novamente.</p>
+
+                            <p>Esta é uma distinção importante em relação ao loop `while` padrão: o `do...while` garante
+                                a
+                                execução do bloco de código pelo menos uma vez, enquanto um loop `while` padrão pode não
+                                executar o bloco de código se a condição for inicialmente falsa.</p>
+
+                            <p>Essa característica torna o `do...while` loop útil em situações em que você precisa
+                                garantir
+                                que um bloco de código seja executado pelo menos uma vez, independentemente da condição
+                                inicial.</p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

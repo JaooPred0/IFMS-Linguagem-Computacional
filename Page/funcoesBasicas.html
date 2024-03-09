@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Aler, prompt, confirm, document.white</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main>
+        <div class="conteudoOrganizado">
+            <h2 id="capitulo1">Alert()</h2>
+            <p>A <b>`alert()`</b> é uma função JavaScript integrada que exibe uma caixa de diálogo com uma mensagem
+                ao
+                usuário. A caixa de diálogo contém um botão OK e o usuário pode clicar nele para fechar a caixa de
+                diálogo.</p>
+            <p>Aqui está um exemplo de como usar a <b>`alert()`</b>:</p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag3">alert</span>(<span class="text">'Hello, world!'</span>);</p>
+                </div>
+            </div>
+            <p>Ao executar este código, aparecerá uma caixa de diálogo com a mensagem "Olá, mundo!" e um botão OK. O
+                usuário pode clicar no botão OK para fechar a caixa de diálogo e continuar executando o restante do
+                código.</p>
+            <p>A <b>`alert()`</b> pode ser útil em determinadas situações, como:</p>
+            <ul>
+                <li>Mostrar</li>
+                <li>Depurando código exibindo o valor de uma variável ou expressão</li>
+            </ul>
+            <p>Porém, é importante usar a <b>`alert()`</b> com cautela, pois ela pode interromper o fluxo de
+                trabalho
+                do usuário e ser irritante se usada excessivamente. Geralmente é melhor usar outros métodos de
+                feedback do usuário, como modificar o conteúdo da página ou usar um sistema de notificação mais
+                sutil, se possível.</p>
+            <p>Aqui está um exemplo de uso <b>`alert()`</b> para depuração:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">let</span> <span class="vari">x</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">y</span> = <span class="number">10</span>;
+                    </p>
+                    <p><span class="tag">let</span> <span class="vari">resultado</span> = <span class="vari">x</span> +
+                        <span class="vari">y</span>;</p>
+                    <p><span class="tag3">alert</span>(<span class="text">'O resultado é:'</span>, <span
+                            class="vari">resultado</span>);
+                </div>
+            </div>
+            <p>Neste exemplo, estamos usando <b>`alert()`</b> para exibir o resultado da adição de dois
+                números. Isso
+                pode ser útil para depuração, pois nos permite verificar rapidamente o valor de uma variável
+                ou expressão sem usar uma ferramenta de depuração mais complexa.</p>
+            </p>
+            <h2 id="capitulo2">Alert() ou window.alert()</h2>
+            <p>Em JavaScript, a função <b>`alert()`</b> é usada para exibir uma caixa de diálogo com uma
+                mensagem para o
+                usuário. Esta função é parte do objeto global window nos navegadores da web. Isso significa que
+                você pode chamar <b>`alert()`</b> como uma função independente ou como um método do objeto
+                <b>`window`</b>, pois
+                <b>`window`</b> é o escopo global padrão no navegador.
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag3">alert</span>(<span class="text">'Hello world'</span>);</p>
+                    <p><span class="tag2">window</span>.<span class="tag3">alert</span>(<span class="text">'Hello
+                            world'</span>);</p>
+                </div>
+            </div>
+
+            <p>
+                O <b>`window`</b> é o objeto de nível superior no ambiente do navegador e contém diversas funções e
+                propriedades integradas que estão disponíveis para o código JavaScript em execução no navegador.
+            </p>
+            <p>
+                Quando se chama <b>`alert()`</b> sem especificar o objeto <b>`window`</b>, o JavaScript assume que
+                se está referindo
+                ao método <b>`alert()`</b> do objeto <b>`window`</b>. Isso ocorre porque <b>`alert()`</b> é uma
+                função global e as funções
+                globais são automaticamente adicionadas como métodos do objeto <b>`window`</b>.</p>
+            <h2 id="capitulo3">Prompt() Geral</h2>
+            <h3>prompt()</h3>
+            <p>A <b>`prompt()`</b> é uma função integrada em JavaScript que exibe uma caixa de diálogo com uma
+                mensagem
+                e um campo de entrada para o usuário inserir um valor. A função retorna um valor de string da
+                entrada do usuário. Aqui está um exemplo:</p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">const</span> <span class="vari">userInput</span> = <span
+                            class="tag3">prompt</span>(<span class="text">'Digite alguma coisa:'</span>);</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">userInput</span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, se o usuário inserir '25' na caixa de diálogo, <b>`userInput`</b> será uma string com
+                o valor
+                '25'.</p>
+            <h3>+prompt</h3>
+            <p>A <b>`+prompt()`</b> sintaxe é uma forma abreviada de converter a entrada do usuário em um número. O
+                operador
+                unário mais <b>`+`</b> é usado para converter uma string em um número. Aqui está um exemplo:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">const</span> <span class="vari">userInput</span> = +<span
+                            class="tag3">prompt</span>(<span class="text">'Digite alguma coisa:'</span>);</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">userInput</span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, se o usuário inserir '25' na caixa de diálogo, <b>`userInput`</b> será um
+                <b>`número`</b> com o valor 25.
+            </p>
+            <h3>Number(prompt())</h3>
+            <p>A <b>`Number(prompt())`</b> sintaxe é semelhante a <b>`+prompt()`</b> , mas usa a <b>`Number()`</b>
+                em vez do operador
+                unário mais. A <b>`Number()`</b> converte um valor em um número. Aqui está um exemplo:</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('6')" value="Copiar"></input>
+                <div class="textoCode" id="6">
+                    <p><span class="tag">const</span> <span class="vari">userInput</span> = <span
+                            class="tag2">Number</span>(<span class="tag3">prompt</span>(<span class="text">'Digite
+                            alguma coisa:'</span>));</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">userInput</span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, se o usuário inserir '25' na caixa de diálogo, <b>`userInput`</b> será um
+                <b>`número`</b> com o valor 25.
+            </p>
+            <h3>parseFloat(prompt())</h3>
+            <p>A <b>`parseFloat(prompt())`</b> sintaxe é semelhante a <b>`Number(prompt())`</b>, mas converte apenas
+                a parte numérica
+                da entrada do usuário. Se o usuário inserir uma string que contenha caracteres não numéricos,
+                <b>` parseFloat()`</b> retornará um número até o último caractere numérico e ignorará o restante.
+                Aqui está um
+                exemplo:
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('7')" value="Copiar"></input>
+                <div class="textoCode" id="7">
+                    <p><span class="tag">const</span> <span class="vari">userInput</span> = <span
+                            class="tag2">parseFloat</span>(<span class="tag3">prompt</span>(<span class="text">'Digite
+                            alguma coisa:'</span>));</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">userInput</span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, se o usuário inserir '123.45abc' na caixa de diálogo, <b>`userInput`</b> será um
+                número com o
+                valor 123,45.</p>
+            <p>Em resumo, <b>`prompt()`</b> retorna um valor de string da entrada do usuário, enquanto
+                <b>`+prompt()`</b>,
+                <b>`Number(prompt())`</b> e parseFloat(prompt()) converte a entrada do usuário em um número. A
+                principal
+                diferença entre <b>`+prompt()`</b>, <b>`Number(prompt())`</b> e <b>`parseFloat(prompt())`</b> é como
+                eles lidam com caracteres
+                não numéricos na entrada do usuário. <b>`+prompt()`</b> e <b>`Number(prompt())`</b> retornará NaNse
+                a entrada do usuário
+                contiver caracteres não numéricos, enquanto <b>`parseFloat(prompt())`</b> retornará um número até o
+                último
+                caractere numérico e ignorará o restante.
+            </p>
+            <h2 id="capitulo4">Confirm()</h2>
+            <p>Certamente! A confirm() é uma função integrada em JavaScript que exibe uma caixa de diálogo com
+                uma mensagem e dois botões: OK e Cancelar. A função retorna um valor booleano com base na resposta
+                do
+                usuário.</p>
+
+            <p>Aqui está um exemplo de como usar a confirm():</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">const</span> <span class="vari">isUserSure</span> = <span
+                            class="tag3">confirm</span>(<span class="text">'Deseja deletar esse arquivo?'</span>);
+                    </p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span
+                            class="vari">isUserSure</span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, se o usuário clicar no botão OK, `isUserSure` será verdadeiro. Se o usuário clicar no
+                botão Cancelar, `isUserSure` será falso.</p>
+
+            <p>A função `confirm()` pode ser útil em situações em que você deseja solicitar confirmação ao usuário
+                antes de realizar uma ação destrutiva, como excluir um registro ou fechar uma janela.</p>
+
+            <p>É importante observar que a função `confirm()` bloqueia a execução do código JavaScript até que o
+                usuário responda à caixa de diálogo. Isso significa que se você tiver outro código JavaScript que
+                precise ser executado após a função `confirm()`, ele não será executado até que o usuário responda à
+                caixa de diálogo.</p>
+            <h2 id="capitulo5">Document.white()</h2>
+            <p>document.write()é um método em JavaScript que grava uma string de texto no documento atual. Ele pode
+                ser
+                usado para adicionar ou modificar conteúdo em uma página da web.</p>
+
+            <p>Aqui está um exemplo de como usar document.write():</p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('6')" value="Copiar"></input>
+                <div class="textoCode" id="6">
+                    <p><span class="tag2">document</span>.<span class="tag3">white</span>(<span class="text">'< h1>
+                                Hello, World! < / h1></span>);</p>
+                </div>
+            </div>
+            <p>Neste exemplo, o document.write() método adiciona um
+                elemento com o texto “Hello, World!” ao documento atual.</p>
+            <h2 id="capitulo6">Conclusão</h2>
+            <p>A função `alert()` é uma ferramenta crucial em JavaScript para exibir mensagens em uma caixa de
+                diálogo
+                para os usuários. Quando você chama `alert()`, uma caixa de diálogo simples com uma mensagem e um
+                botão
+                "OK" é exibida, permitindo que os usuários interajam com ela. Isso é útil para fornecer feedback
+                imediato ou solicitar a atenção do usuário em determinados pontos de sua aplicação.</p>
+
+            <p>É importante usar a função `alert()` com parcimônia, pois ela pode interromper o fluxo de trabalho do
+                usuário e ser considerada irritante se usada em excesso. Geralmente, é preferível utilizar métodos
+                mais
+                sutis de feedback ao usuário, como modificar o conteúdo da página ou utilizar sistemas de
+                notificação
+                mais discretos, quando possível.
+            </p>
+            <p>Além disso, é relevante destacar que a função `alert()` é parte do objeto global `window` em
+                navegadores
+                da web. Isso significa que você pode chamá-la tanto como uma função independente quanto como um
+                método
+                do objeto `window`, sendo `window.alert()` uma forma mais explícita de fazer isso.</p>
+
+            <p>Em resumo, a função `alert()` é uma ferramenta poderosa em JavaScript para interagir com os usuários,
+                mas deve ser usada com cuidado para não prejudicar a experiência do usuário. Optar por métodos de
+                feedback mais sutis e menos invasivos sempre que possível pode levar a uma melhor experiência do
+                usuário
+                em sua aplicação.</p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

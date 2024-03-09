@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <div class="text">
+            <span>Topo</span>
+        </div>
+        <div class="clone">
+            <span>Topo</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <header>
+        <h1>Operadores Relacionais</h1>
+        <a href="../index.html" class="menu__link">Voltar</a>
+    </header>
+    <main class="mainNotIndex">
+        <div class="conteudoOrganizado">
+            <p>Operadores relacionais em JavaScript são usados ​​para comparar dois valores e retornar um valor booleano
+                (
+                <b>`true`</b> ou <b>`false`</b>) com base no resultado da comparação. Aqui estão os operadores
+                relacionais mais comumente
+                usados ​​em JavaScript:
+            </p>
+            <p>
+                <li style="list-style: decimal;"><b>Igual a (==)</b>: compara dois valores quanto à igualdade, após
+                    convertê-los em um tipo comum.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('1')" value="Copiar"></input>
+                <div class="textoCode" id="1">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span> ==
+                        <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>Observe que o <b>==</b> operador às vezes pode levar a resultados inesperados devido à coerção de tipo,
+                portanto,
+                geralmente é recomendado usar o operador de igualdade estrita <b>(===)</b>.</p>
+            <p>
+                <li style="list-style: decimal;"><b>Estritamente igual a (===)</b>: compara dois valores quanto à
+                    igualdade sem coerção de tipo.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('2')" value="Copiar"></input>
+                <div class="textoCode" id="2">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span> ===
+                        <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Diferente de (!=)</b>: compara dois valores quanto à desigualdade,
+                    após convertê-los para um tipo comum.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('3')" value="Copiar"></input>
+                <div class="textoCode" id="3">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span> !=
+                        <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>Novamente, é recomendado usar o operador estrito <b>!==</b> diferente de <b>( )</b>.</p>
+            <p>
+                <li style="list-style: decimal;"><b>Estritamente diferente de (!==)</b>: Compara dois valores para
+                    desigualdade sem coerção de tipo.
+                </li>
+            </p>
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('4')" value="Copiar"></input>
+                <div class="textoCode" id="4">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span> !==
+                        <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Maior que (>)</b>: Retorna truese o operando esquerdo for maior que
+                    o operando direito.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('5')" value="Copiar"></input>
+                <div class="textoCode" id="5">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span> >
+                        <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Menor que (<) </b>: Retorna truese o operando esquerdo for menor que
+                            o operando direito.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('6')" value="Copiar"></input>
+                <div class="textoCode" id="6">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span>
+                        < <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Maior ou igual a (>=)</b>: Retorna truese o operando esquerdo for
+                    maior ou igual ao operando direito.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('7')" value="Copiar"></input>
+                <div class="textoCode" id="7">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span>
+                        >= <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <li style="list-style: decimal;"><b>Menor ou igual a (<=) </b>: Retorna truese o operando esquerdo for
+                            menor ou igual ao operando direito.
+                </li>
+            </p>
+
+            <div class="centralCode">
+                <input class="btnCopi" type="button" onclick="CopyTexto('8')" value="Copiar"></input>
+                <div class="textoCode" id="8">
+                    <p><span class="tag">let</span> <span class="vari">a</span> = <span class="number">5</span>;</p>
+                    <p><span class="tag">let</span> <span class="vari">b</span> = <span class="text">'5'</span>;</p>
+                    <p><span class="tag2">console</span>.<span class="tag3">log</span>(<span class="vari">a</span>
+                        <= <span class="vari">b</span>);
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <p>É importante observar que ao usar operadores relacionais com valores não numéricos, o JavaScript tentará
+                primeiro convertê-los em números. No entanto, isso às vezes pode levar a resultados inesperados, por
+                isso geralmente é uma boa ideia certificar-se de que você está trabalhando explicitamente com números.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <span style='font-size:30px;'>&#128581;</span>
+        <ul>
+            <li><a href="../footer/perfil.html" class="menu__link">Perfil</a></li>
+            <li><a href="../footer/vapo.html" class="menu__link">Vapo</a></li>
+        </ul> <span style='font-size:30px;'>&#128540;</span>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>
